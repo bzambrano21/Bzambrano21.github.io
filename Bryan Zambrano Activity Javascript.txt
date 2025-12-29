@@ -1,0 +1,37 @@
+<p id="text">Hello! Click the button.</p>
+<button onclick="changeText()">Click me</button>
+<script>
+
+function changeText() {
+  document.getElementById("text").innerText = "The text has changed!";
+}
+</script>
+
+<form onsubmit="checkName(); return false;">
+  <label>Enter your name:</label><br>
+  <input type="text" id="name">
+  <br><br>
+  <button type="submit">Submit</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+function checkName() {
+  let name = document.getElementById("name").value;
+
+  if (name === "") {
+    document.getElementById("message").innerText = "Please enter your name.";
+  } else {
+    document.getElementById("message").innerText = "Hello " + name + "!";
+  }
+}
+</script>
+
+<button onclick="changeColor()">Change background color</button>
+
+<script>
+function changeColor() {
+  document.body.style.backgroundColor = "lightblue";
+}
+</script>
